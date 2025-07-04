@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import bgn from "@/../public/img/bg.png"; // Adjust the path as necessary
-import SpellingGame from "@/app/demo";
+// import SpellingGame from "@/app/demo";
 // import Mainpage from "@/app/mainpage";
 // import Searchx from "@/Components/Searchx";
-import Navx from "@/Components/Navx";
+import Navx from "./Components/pages/Navbaarx/Navx";
 // import Carouselx from "@/Components/Carouselx";
 
 export default function Home() {
@@ -28,8 +29,19 @@ export default function Home() {
             <div className='mt-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>
               <div className=''>
                 <div className='relative border-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 max-lg:h-66 max-lg:border-t lg:border-l dark:[--pattern-fg:var(--color-white)]/10'>
-                  <SpellingGame />
+                  {/* <SpellingGame /> */}
                   {/* <Mainpage /> */}
+
+                  <Link href="/">
+                  <div className='flex items-center text-2xl justify-center h-full'>
+                    home
+                  </div>
+                  </Link>
+                  <Link href="./Components/pages/Gamex" lagacyBehavior>
+                 <div className='flex items-center text-2xl justify-center h-full'>
+                    demo
+                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
