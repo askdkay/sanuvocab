@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { simpleWords } from "../../../Data/Eng_Hi_data_01"; // Adjust the import path as necessary
+import { simpleWords } from "../../Data/Eng_Hi_data_01"; // Adjust the import path as necessary
 
 
 // Import all your files...
