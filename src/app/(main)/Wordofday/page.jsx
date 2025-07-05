@@ -32,7 +32,7 @@ const prevWord = () => setIndex((prev) => (prev - 1 + words.length) % words.leng
 const { word, type, definition, example } = words[index];
 
 return (
-    <div className="min-h-screen bg-blue-50 flex flex-col items-center justify-center py-10">
+    <div className="min-h-screen bg-stone-950 flex flex-col items-center justify-center py-10">
         <h1 className="text-4xl font-extrabold mb-8 text-blue-800 drop-shadow">Word of the Day</h1>
         <div className="bg-white rounded-2xl shadow-xl p-8 max-w-lg w-full">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">{word}</h2>

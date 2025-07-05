@@ -1,30 +1,52 @@
-import React from 'react';
+"use client";
+import React, { useState } from "react";
 
-const Dictionary = () => {
+const initialWords = [
+  { word: "serendipity", meaning: "The occurrence of events by chance in a happy or beneficial way.", hindi: "संयोगवश सुखद घटना" },
+  { word: "ephemeral", meaning: "Lasting for a very short time.", hindi: "क्षणिक" },
+];
+
+export default function DictionaryPage() {
+  const [search, setSearch] = useState("");
+
+  const filteredWords = initialWords.filter(
+    (entry) =>
+      entry.word.toLowerCase().includes(search.toLowerCase()) ||
+      entry.meaning.toLowerCase().includes(search.toLowerCase()) ||
+      (entry.hindi && entry.hindi.includes(search))
+  );
+
   return (
-    <div>
-      this is the Dictionary page.
-      <p>Here you can find definitions, synonyms, and more for various words.</p>
-      <p>Use the search bar to look up any word you want to know more about.</p>
-      <p>Explore different categories of words and their meanings.</p>
-      <p>Stay tuned for daily word updates and vocabulary challenges!</p>
-      <p>Happy learning!</p>
-      <p>Feel free to contribute by adding new words or definitions.</p>
-      <p>Join our community discussions to enhance your vocabulary.</p>
-      <p>Check out our resources for language learning and improvement.</p>
-      <p>We aim to make language accessible and enjoyable for everyone.</p>
-      <p>Thank you for visiting our Dictionary page!</p>
-      <p>We hope you find it useful and informative.</p>
-      <p>If you have any suggestions or feedback, please let us know.</p>
-      <p>Happy exploring!</p>
-      <p>Remember, every word has a story and a meaning waiting to be discovered.</p>
-      <p>Let's embark on this linguistic journey together!</p>
-      <p>Keep expanding your vocabulary and understanding of language.</p>
-      <p>We appreciate your interest in enhancing your language skills.</p>
-      <p>Feel free to bookmark this page for easy access to word definitions.</p>
-      <p>We are constantly updating our dictionary with new words and meanings.</p>         
+    <div className="max-w-2xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-6 text-center">Dictionary</h1>
+
+      {/* Search */}
+      <input
+        type="text"
+        placeholder="Search word, meaning, or Hindi..."
+        className="w-full px-4 py-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+
+      {/* Word list */}
+      <ul className="space-y-4">
+        {filteredWords.length === 0 && (
+          <li className="text-gray-500 text-center">No words found.</li>
+        )}
+        {filteredWords.map((entry) => (
+          <li
+            key={entry.word}
+            className="flex items-start justify-between bg-white shadow rounded p-4"
+          >
+            <div>
+              <span className="font-semibold text-lg">{entry.word}</span>
+              <div className="text-gray-600">{entry.meaning}</div>
+              <div className="text-green-700">{entry.hindi}</div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
-
-export default Dictionary;
