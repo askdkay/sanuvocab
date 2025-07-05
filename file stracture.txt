@@ -1,0 +1,18 @@
+    src/
+    └── app/
+        └── Components/
+            ├── pages/
+            │   └── Aboutx/page.jsx
+            │   └── Contactx/page.jsx
+            │   └── Dictionary/page.jsx
+            │   └── Footerx/page.jsx
+            │   └── Gamex/page.jsx
+            │   └── Helpx/page.jsx
+            │   └── HomeBodyx/page.jsx
+            │   └── Navbaarx/page.jsx
+            │   └── searchx/page.jsx
+        └── Data/
+            ├── Eng_Hi_data_01.js
+        └── globals.css
+        └── layout.js
+        └── page.js

@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import bgn from "@/../public/img/bg.png"; // Adjust the path as necessary
+// import Image from "next/image";
+// import bgn from "@/../public/img/bg.png"; // Adjust the path as necessary
 // import SpellingGame from "@/app/demo";
 // import Mainpage from "@/app/mainpage";
 // import Searchx from "@/Components/Searchx";
-import Navx from "./Components/pages/Navbaarx/Navx";
+// import Navx from "../Navbaarx/page";
 // import Carouselx from "@/Components/Carouselx";
-
+// import Homee from "@/app/Components/Home/Body/page";
 export default function Home() {
   return (
     <div className="max-w-screen overflow-x-hidden background-image bg-[url('/img/bg.png')] bg-cover bg-center bg-no-repeat">
@@ -18,7 +18,10 @@ export default function Home() {
           <div>
             <div className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'></div>
             <div className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'></div>
-            <Navx />
+            {/* nav baar  */}
+            
+            {/* <Homee/> */}
+
             <div className='mt-10 px-4 sm:hidden relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>
               <a className='z-1 w-full text-center inline-block rounded-4xl bg-black px-4 py-2 text-sm/6 font-semibold text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600' href='docs/installation'></a>
             </div>
@@ -37,11 +40,12 @@ export default function Home() {
                     home
                   </div>
                   </Link>
-                  <Link href="./Components/pages/Gamex" lagacyBehavior>
+                  <Link href="/" lagacybhavior="true">
                  <div className='flex items-center text-2xl justify-center h-full'>
                     demo
                   </div>
                   </Link>
+
                 </div>
               </div>
             </div>
