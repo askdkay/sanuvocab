@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { simpleWords } from "../../Data/Eng_Hi_data_01"; // Adjust the import path as necessary
+import { simpleWords } from "../../../app/Data/Eng_Hi_data_01"; // Adjust the import path as necessary
 
 
 // Import all your files...
@@ -95,7 +95,7 @@ const SpellingGame = () => {
     <div className='relative h-full  flex flex-col items-center w-full justify-center '>
       {/* macbook view */}
 
-      <div className='bg-gray-950/5 p-2 lg:col-span-2 lg:-mx-px w-[70%]'>
+      <div className='bg-gray-950/5 p-2 lg:col-span-2 lg:-mx-px w-[100%] md:w-[70%]'>
         <div className='rounded-xl bg-gray-950'>
           <div className='rounded-xl p-1 text-sm scheme-dark dark:inset-ring dark:inset-ring-gray-100/30'>
             <div className='flex gap-2 p-2'>
@@ -109,8 +109,8 @@ const SpellingGame = () => {
                   {/*  */}
 
                   <div className='bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)] dark:[--pattern-fg:var(--color-white)]/10 w-full max-w-[95%] h-[28rem] bg-gray-950 border-[1px] border-gray-100/30  rounded-md shadow-lg p-6 space-y-6'>
-                    <h1 className='text-3xl font-bold text-center text-white diplomata-regular'>Spelling Game</h1>
-                    {/* word/score */}white
+                    <h1 className='text-2xl md:text-3xl font-bold text-center text-white diplomata-regular'>Spelling Game</h1>
+                    
                     <div className='flex justify-between items-center mb-2'>
                       <span className='text-sm font-medium text-gray-500'>
                         Word {currentWordIndex + 1} of {wordList.length}
@@ -120,7 +120,7 @@ const SpellingGame = () => {
                       </span>
                     </div>
                     {/*  */}
-                    <div className='flex flex-row justify-between items-center'>
+                    <div className='flex-col flex justify-between items-center  md:flex-row'>
                       {/* wordlist */}
                       <div className=''>
                         <p>Word is </p>
