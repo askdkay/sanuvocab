@@ -45,12 +45,12 @@ Welcome to the **English Dictionary Game** website – a fun, interactive, and e
 
 ## 📎 Links
 
-- 🔗 **Live Website**: [Visit Now](https://your-website-link.com)  
-- 💻 **GitHub Repo**: [GitHub](https://github.com/yourusername/your-repo)
+- 🔗 **Live Website**: [Visit Now]([https://your-website-link.com](https://sanuvocab.vercel.app/))  
+- 💻 **GitHub Repo**: [GitHub]([(https://github.com/askdkay/sanuvocab)])
 
 ## 👨‍💻 About the Developer
 
-Made with ❤️ by **Dinesh Choudhary**, a passionate web developer focused on building educational tools for learners.
+Made with ❤️ by **DKAY**, a passionate web developer focused on building educational tools for learners.
 
 ---
 
